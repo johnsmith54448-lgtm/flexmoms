@@ -17,14 +17,14 @@ window.MOMFLEX_CONFIG = {
 
   features: [
     "⏱ Fast — a few minutes",
-    "💸 Real payouts",
+    "💸 Sign up $5 Bonus",
     "🔒 Privacy-first"
   ],
 
 
   cta: {
     text: "▶ CLICK HERE TO GET STARTED NOW",
-    affiliateUrl: "https://afflat3d3.com/trk/lnk/BF6012F9-6C28-4D65-859D-2FC3A98BAC1A/?o=27707&c=918277&a=717778&k=9E5C3A8964407F5951A5FE621231CBF0&l=29747"
+    affiliateUrl: "https://afflat3d3.com/trk/lnk/BF6012F9-6C28-4D65-859D-2FC3A98BAC1A/?o=6365&c=918277&a=717778&k=58B1D5ECB005BB03DD44C875A16076D0&l=5077"
   },
 
 

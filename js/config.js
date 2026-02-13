@@ -24,7 +24,7 @@ window.MOMFLEX_CONFIG = {
 
   cta: {
     text: "▶ CLICK HERE TO GET STARTED NOW",
-    affiliateUrl: "https://afflat3d3.com/trk/lnk/BF6012F9-6C28-4D65-859D-2FC3A98BAC1A/?o=6365&c=918277&a=717778&k=58B1D5ECB005BB03DD44C875A16076D0&l=5077"
+    affiliateUrl: "https://6msr6.bemobtrcks.com/go/07181092-97f2-4033-a656-c3d6c192e91f"
   },
 
 

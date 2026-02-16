@@ -1,5 +1,5 @@
 // js/main.js - reads MOMFLEX_CONFIG and injects content into page
-window.MOMFLEX_CONFIG = window.MOMFLEX_CONFIG || { cta: { affiliateUrl: '#' } };
+window.MOMFLEX_CONFIG = window.MOMFLEX_CONFIG || { cta: { offers: [] } };
 
 (function(cfg) {
   function setText(selector, value) {
@@ -20,6 +20,7 @@ window.MOMFLEX_CONFIG = window.MOMFLEX_CONFIG || { cta: { affiliateUrl: '#' } };
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+
     // Site / header
     setText('[data-field="brandName"]', cfg.site.brandName || '');
     setText('[data-field="tagline"]', cfg.site.tagline || '');
@@ -43,13 +44,26 @@ window.MOMFLEX_CONFIG = window.MOMFLEX_CONFIG || { cta: { affiliateUrl: '#' } };
     // Features list
     var featContainer = document.querySelector('[data-field="features"]');
     if(featContainer && Array.isArray(cfg.features)) {
-      featContainer.innerHTML = cfg.features.map(function(f){ return '<div class="feature">'+f+'</div>'; }).join('');
+      featContainer.innerHTML = cfg.features.map(function(f){
+        return '<div class="feature">'+f+'</div>';
+      }).join('');
     }
 
-    // CTA text and link
+    // =========================
+    // RANDOM OFFER SELECTION
+    // =========================
+
     setText('[data-field="ctaText"]', cfg.cta.text || 'Get started');
+
+    var selectedOffer = '#';
+
+    if (Array.isArray(cfg.cta.offers) && cfg.cta.offers.length > 0) {
+      var randomIndex = Math.floor(Math.random() * cfg.cta.offers.length);
+      selectedOffer = cfg.cta.offers[randomIndex];
+    }
+
     document.querySelectorAll('[data-field="ctaLink"]').forEach(function(a) {
-      a.setAttribute('href', cfg.cta.affiliateUrl || '#');
+      a.setAttribute('href', selectedOffer);
     });
 
     // Testimonials
@@ -66,12 +80,21 @@ window.MOMFLEX_CONFIG = window.MOMFLEX_CONFIG || { cta: { affiliateUrl: '#' } };
 
     // Legal links
     if(cfg.legal){
-      document.querySelectorAll('[data-field="termsLink"]').forEach(function(a){ a.setAttribute('href', cfg.legal.termsUrl || '#'); });
-      document.querySelectorAll('[data-field="privacyLink"]').forEach(function(a){ a.setAttribute('href', cfg.legal.privacyUrl || '#'); });
+      document.querySelectorAll('[data-field="termsLink"]').forEach(function(a){
+        a.setAttribute('href', cfg.legal.termsUrl || '#');
+      });
+      document.querySelectorAll('[data-field="privacyLink"]').forEach(function(a){
+        a.setAttribute('href', cfg.legal.privacyUrl || '#');
+      });
     }
 
     // Analytics hook placeholder
-    document.querySelectorAll('a.cta').forEach(function(a){ a.addEventListener('click', function(){ try{ console.log('CTA click'); }catch(e){} }); });
+    document.querySelectorAll('a.cta').forEach(function(a){
+      a.addEventListener('click', function(){
+        try{ console.log('CTA click'); }catch(e){}
+      });
+    });
+
   });
 
 })(window.MOMFLEX_CONFIG);

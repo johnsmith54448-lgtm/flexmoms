@@ -21,16 +21,17 @@ window.MOMFLEX_CONFIG = {
   ],
 
   // =========================
-  // RANDOM OFFERS SECTION
+  // RANDOM OFFERS (2 Offers)
   // =========================
   cta: {
-  text: "▶ CLICK HERE TO GET STARTED NOW",
+    text: "▶ CLICK HERE TO GET STARTED NOW",
 
-  offers: [
-    "https://afflat3d3.com/trk/lnk/BF6012F9-6C28-4D65-859D-2FC3A98BAC1A/?o=6365&c=918277&a=717778&k=58B1D5ECB005BB03DD44C875A16076D0&l=5077",
-    "https://afflat3d2.com/trk/lnk/BF6012F9-6C28-4D65-859D-2FC3A98BAC1A/?o=27707&c=918277&a=717778&k=9E5C3A8964407F5951A5FE621231CBF0&l=29747"
-  ]
-},
+    offers: [
+      "https://afflat3d3.com/trk/lnk/BF6012F9-6C28-4D65-859D-2FC3A98BAC1A/?o=6365&c=918277&a=717778&k=58B1D5ECB005BB03DD44C875A16076D0&l=5077",
+      "https://afflat3d2.com/trk/lnk/BF6012F9-6C28-4D65-859D-2FC3A98BAC1A/?o=30447&c=918277&a=717778&k=CA9E954D1025DECE9E39940BE221728D&l=34796"
+    ]
+  },
+
   testimonials: [
     {
       name: "Laura M.",
